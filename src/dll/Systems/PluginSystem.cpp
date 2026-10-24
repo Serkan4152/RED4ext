@@ -289,8 +289,8 @@ void PluginSystem::Load(const std::filesystem::path& aPath, bool aUseAlteredSear
                 L"{} (version: {}) is incompatible with the current patch. The requested runtime of the plugin is {}",
                 pluginName, std::to_wstring(pluginVersion), std::to_wstring(requestedRuntime));
 
-            m_incompatiblePlugins.emplace_back(pluginName);
-            return;
+            //m_incompatiblePlugins.emplace_back(pluginName);
+            //return;
         }
     }
 
@@ -302,7 +302,7 @@ void PluginSystem::Load(const std::filesystem::path& aPath, bool aUseAlteredSear
                      L"criteria: RED4ext.SDK >= {}",
                      pluginName, std::to_wstring(pluginVersion), std::to_wstring(pluginSdk), Version::Get(),
                      std::to_wstring(MINIMUM_SDK_VERSION));
-        return;
+        //return;
     }
 
     auto module = plugin->GetModule();
